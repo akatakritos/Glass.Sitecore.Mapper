@@ -1,3 +1,0 @@
-h2. Dependencies
-
-Please visit the "Dependencies":https://github.com/Glass-lu/Glass.Sitecore.Mapper/wiki/Dependencies page on the GitHub Wiki to find out what dependencies you will need to download.
