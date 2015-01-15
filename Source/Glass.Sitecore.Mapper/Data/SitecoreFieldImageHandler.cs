@@ -85,7 +85,7 @@ namespace Glass.Sitecore.Mapper.Data
                 //this only handles empty guids, but do we need to remove the link before adding a new one?
                 if (img.MediaId == Guid.Empty)
                 {
-                    ItemLink link = new ItemLink(item.Database.Name, item.ID, scImg.InnerField.ID, scImg.MediaItem.Database.Name, scImg.MediaID, scImg.MediaPath);
+                    ItemLink link = new ItemLink(item.Database.Name, item.ID, scImg.InnerField.ID, scImg.MediaItem.Database.Name, scImg.MediaID, MediaManager.GetMediaUrl(scImg.MediaItem));
                     scImg.RemoveLink(link);
                 }
                 else

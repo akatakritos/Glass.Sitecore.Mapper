@@ -24,6 +24,7 @@ using Glass.Sitecore.Mapper.FieldTypes;
 using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Data.Fields;
+using Sitecore.Resources.Media;
 using Sitecore.SecurityModel;
 using Glass.Sitecore.Mapper.Configuration;
 using Glass.Sitecore.Mapper.Configuration.Fluent;
@@ -469,7 +470,7 @@ namespace Glass.Sitecore.Mapper.Tests.Configuration.Fluent
             Assert.AreEqual("487", image.Height);
             Assert.AreEqual("52", image.HSpace);
             Assert.AreEqual(new Guid("{0CF0A6D0-8A2B-479B-AD8F-14938135174A}"), image.MediaID.Guid);
-            Assert.AreEqual("/~/media/Files/Kitten2.ashx", image.Src);
+            Assert.AreEqual("/~/media/Files/Kitten2.ashx", MediaManager.GetMediaUrl(image.MediaItem));
             Assert.AreEqual("32", image.VSpace);
             Assert.AreEqual("26", image.Width);
 
